@@ -2,7 +2,7 @@ package test;
 
 public class TestRunner {
     public static void main(String[] args) {
-        NotenProzessorTest notenProzessorTest = new NotenProzessorTest();
+        GradeProcessorTest notenProzessorTest = new GradeProcessorTest();
 
         notenProzessorTest.addToArrayTest();
     }

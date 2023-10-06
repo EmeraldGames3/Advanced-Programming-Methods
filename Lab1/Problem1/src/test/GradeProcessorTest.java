@@ -1,15 +1,13 @@
 package test;
 
-import main.NotenProzessor;
+import main.GradeProcessor;
 
-import java.util.ArrayList;
-
-class NotenProzessorTest {
+class GradeProcessorTest {
 
     public static final String SHOULD_BE_EQUAL = "Soll gleich sein";
 
     public void addToArrayTest() {
-        NotenProzessor notenProzessor = new NotenProzessor();
+        GradeProcessor notenProzessor = new GradeProcessor();
 
         int[] noten = new int[] { 10, 20, 30 };
         int newElement = 50;
