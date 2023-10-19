@@ -19,6 +19,7 @@ public class Ex3Test {
 
     @Test
     public void testAddition() {
+        // Test for the addition of two large numbers in arrays
         int[] number1 = {1, 3, 0, 0, 0, 0, 0, 0, 0};
         int[] number2 = {8, 7, 0, 0, 0, 0, 0, 0, 0};
         int[] expectedResult = {1, 0, 0, 0, 0, 0, 0, 0, 0, 0};
@@ -34,8 +35,8 @@ public class Ex3Test {
 
     @Test
     public void testAdditionFail() {
+        // Test for the addition of two empty arrays (Failure expected)
         int[] number1 = {};
-
         int[] number2 = {};
 
         try {
@@ -48,6 +49,7 @@ public class Ex3Test {
 
     @Test
     public void testSubtraction() {
+        // Test for the subtraction of two large numbers in arrays
         int[] number1 = {8, 3, 0, 0, 0, 0, 0};
         int[] number2 = {5, 4, 0, 0, 0, 0, 0};
         int[] expectedResult = {2, 9, 0, 0, 0, 0, 0};
@@ -63,6 +65,7 @@ public class Ex3Test {
 
     @Test
     public void testSubtractionFail() {
+        // Test for the subtraction of two empty arrays (Failure expected)
         int[] number1 = {};
         int[] number2 = {};
 
@@ -76,6 +79,7 @@ public class Ex3Test {
 
     @Test
     public void testMultiplication() {
+        // Test for the multiplication of a large number array by an integer
         int[] number = {2, 3, 6, 0, 0, 0, 0, 0, 0};
         int integer = 2;
         int[] expectedResult = {4, 7, 2, 0, 0, 0, 0, 0, 0};
@@ -91,6 +95,7 @@ public class Ex3Test {
 
     @Test
     public void testMultiplicationFail() {
+        // Test for the multiplication of an empty array by zero (Failure expected)
         int[] number = {};
         int integer = 0;
 
@@ -104,6 +109,7 @@ public class Ex3Test {
 
     @Test
     public void testDivision() {
+        // Test for the division of a large number array by an integer
         int[] number = {2, 3, 6, 0, 0, 0, 0, 0, 0};
         int divisor = 2;
         int[] expectedResult = {1, 1, 8, 0, 0, 0, 0, 0, 0};
@@ -119,6 +125,7 @@ public class Ex3Test {
 
     @Test
     public void testDivisionFail() {
+        // Test for the division of an empty array by zero (Failure expected)
         int[] number = {};
         int divisor = 0;
 

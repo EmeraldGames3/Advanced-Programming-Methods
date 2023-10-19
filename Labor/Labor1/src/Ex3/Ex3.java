@@ -4,6 +4,7 @@ public class Ex3 {
 
     // Addition of two large numbers represented as arrays
     public static int[] sum(int[] number1, int[] number2) {
+        // Validate input
         if (number1 == null || number2 == null || number1.length != number2.length || number1.length == 0) {
             throw new IllegalArgumentException("Invalid input");
         }
@@ -12,6 +13,7 @@ public class Ex3 {
         int[] result = new int[n + 1];
         int carry = 0;
 
+        // Iterate from the least significant digit to the most significant digit
         for (int i = n - 1; i >= 0; i--) {
             int sum = number1[i] + number2[i] + carry;
             result[i + 1] = sum % 10;  // Store the least significant digit of the sum
@@ -27,6 +29,7 @@ public class Ex3 {
 
     // Subtraction of two large numbers represented as arrays
     public static int[] subtract(int[] number1, int[] number2) {
+        // Validate input
         if (number1 == null || number2 == null || number1.length != number2.length || number1.length == 0) {
             throw new IllegalArgumentException("Invalid input");
         }
@@ -35,6 +38,7 @@ public class Ex3 {
         int[] result = new int[n];
         int borrow = 0;
 
+        // Iterate from the least significant digit to the most significant digit
         for (int i = n - 1; i >= 0; i--) {
             int difference = number1[i] - number2[i] - borrow;
 
@@ -53,6 +57,7 @@ public class Ex3 {
 
     // Multiplication of a large number array by a digit
     public static int[] multiply(int[] number1, int digit) {
+        // Validate input
         if (number1 == null || number1.length == 0 || digit < 0 || digit > 9) {
             throw new IllegalArgumentException("Invalid input");
         }
@@ -61,6 +66,7 @@ public class Ex3 {
         int[] result = new int[n];
         int carry = 0;
 
+        // Iterate from the most significant digit to the least significant digit
         for (int i = n - 1; i >= 0; i--) {
             int product = number1[i] * digit + carry;
             result[i] = product % 10;  // Store the least significant digit of the product
@@ -76,6 +82,7 @@ public class Ex3 {
 
     // Integer division of a large number array by a digit
     public static int[] divide(int[] num1, int divisor) {
+        // Validate input
         if (num1 == null || num1.length == 0 || divisor == 0) {
             throw new IllegalArgumentException("Invalid input");
         }
@@ -84,6 +91,7 @@ public class Ex3 {
         int[] result = new int[n];
         int remainder = 0;
 
+        // Iterate from the least significant digit to the most significant digit
         for (int i = 0; i < n; i++) {
             int currentDigit = num1[i] + remainder * 10;
             result[i] = currentDigit / divisor;
