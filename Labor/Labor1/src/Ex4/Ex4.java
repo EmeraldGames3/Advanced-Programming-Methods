@@ -43,7 +43,7 @@ public class Ex4 {
         }
 
         if (drives.length == 0) {
-            throw new  IllegalArgumentException("Array is empty");
+            throw new IllegalArgumentException("Array is empty");
         }
 
         // Sort the drives array in ascending order and then find the highest-priced drive within budget
