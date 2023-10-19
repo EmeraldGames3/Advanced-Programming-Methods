@@ -26,7 +26,7 @@ public class Ex1 {
     }
 
     // Round the grades according to specific rules and return an array of rounded grades
-    public static int[] roundGrades(int[] grades) {
+    public static int[] roundedGrades(int[] grades) {
         if (grades == null) {
             throw new IllegalArgumentException("Array is null");
         }
@@ -51,8 +51,5 @@ public class Ex1 {
         }
 
         return maxRoundedGrade;
-    }
-
-    public static void getRoundedGrades(int[] grades) {
     }
 }

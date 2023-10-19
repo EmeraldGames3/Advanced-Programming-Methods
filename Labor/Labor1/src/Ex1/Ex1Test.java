@@ -1,0 +1,132 @@
+package Ex1;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import Ex1.Ex1;
+
+import static org.junit.Assert.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class Ex1Test {
+
+    private static final String TEST_ONE = "Failing Grades Test";
+    private static final String TEST_TWO = "Average Grade Test";
+    private static final String TEST_THREE = "Rounded Grades Test";
+    private static final String TEST_FOUR = "Max Rounded Grade Test";
+
+    private static final String SUCCESSFUL = "was successful";
+    private static final String FAILED = "has failed";
+
+    @BeforeEach
+    public void setUp() {
+        // Initialization code if needed
+    }
+
+    @Test
+    public void testFailingGrades() {
+        int[] grades = {84, 29, 72, 38, 41};
+        int[] result = Ex1.getFailingGrades(grades);
+        int[] expected = {29, 38};
+
+        try {
+            Assertions.assertArrayEquals(expected, result);
+            System.out.println(TEST_ONE + " " + SUCCESSFUL);
+        } catch (AssertionError e) {
+            System.out.println(TEST_ONE + " " + FAILED);
+        }
+    }
+
+    @Test
+    public void testFailingGradesNull() {
+        int[] grades = {};
+
+        try {
+            assertThrows(IllegalArgumentException.class, () -> Ex1.getFailingGrades(grades));
+            System.out.println(TEST_ONE + " " + SUCCESSFUL);
+        } catch (AssertionError e) {
+            System.out.println(TEST_ONE + " " + FAILED);
+        }
+    }
+
+    @Test
+    public void testAverageGrade() {
+        int[] grades = {84, 29, 72, 38, 41};
+        double expected = 52.8;
+
+        double result = Ex1.calculateAverage(grades);
+
+        try {
+            assertEquals(expected, result);
+            System.out.println(TEST_TWO + " " + SUCCESSFUL);
+        } catch (AssertionError e) {
+            System.out.println(TEST_TWO + " " + FAILED);
+        }
+    }
+
+    @Test
+    public void testAverageGradeFail() {
+        int[] grades = {};
+
+        try {
+            assertThrows(IllegalArgumentException.class, () -> Ex1.calculateAverage(grades));
+            System.out.println(TEST_TWO + " " + SUCCESSFUL);
+        } catch (AssertionError e) {
+            System.out.println(TEST_TWO + " " + FAILED);
+        }
+    }
+
+    @Test
+    public void testRoundedGrades() {
+        int[] grades = {84, 29, 72, 38, 41};
+        int[] expected = {85, 29, 72, 40, 41};
+
+        int[] result = Ex1.roundedGrades(grades);
+
+        try {
+            Assertions.assertArrayEquals(expected, result);
+            System.out.println(TEST_THREE + " " + SUCCESSFUL);
+        } catch (AssertionError e) {
+            System.out.println(TEST_THREE + " " + FAILED);
+        }
+    }
+
+    @Test
+    public void testRoundedGradesFail() {
+        int[] grades = {};
+
+        try {
+            assertThrows(IllegalArgumentException.class, () -> Ex1.roundedGrades(grades));
+            System.out.println(TEST_THREE + " " + SUCCESSFUL);
+        } catch (AssertionError e) {
+            System.out.println(TEST_THREE + " " + FAILED);
+        }
+    }
+
+    @Test
+    public void testMaxRoundedGrade() {
+        int[] grades = {84, 29, 72, 38, 41};
+        int expected = 85;
+
+        int result = Ex1.getMaxRoundedGrade(grades);
+
+        try {
+            Assertions.assertEquals(expected, result);
+            System.out.println(TEST_FOUR + " " + SUCCESSFUL);
+        } catch (AssertionError e) {
+            System.out.println(TEST_FOUR + " " + FAILED);
+        }
+    }
+
+    @Test
+    public void testMaxRoundedGradeFail() {
+        int[] grades = {};
+
+        try {
+            assertThrows(IllegalArgumentException.class, () -> Ex1.getMaxRoundedGrade(grades));
+            System.out.println(TEST_FOUR + " " + SUCCESSFUL);
+        } catch (AssertionError e) {
+            System.out.println(TEST_FOUR + " " + FAILED);
+        }
+    }
+}
