@@ -22,6 +22,7 @@ public class Ex2Test {
         int result = Ex2.findMax(arr);
 
         try {
+            // Check if the biggest number is correctly found
             Assertions.assertEquals(expected, result);
             System.out.println(TEST_ONE + " was successful");
         } catch (AssertionError e) {
@@ -33,6 +34,7 @@ public class Ex2Test {
     public void testFindBiggestNrFail() {
         int[] arr = {};
         try {
+            // Check if the function correctly handles an empty array
             int result = Ex2.findMax(arr);
             System.out.println(TEST_ONE + " has failed");
         } catch (IllegalArgumentException e) {
@@ -47,6 +49,7 @@ public class Ex2Test {
         int result = Ex2.findMin(arr);
 
         try {
+            // Check if the smallest number is correctly found
             Assertions.assertEquals(expected, result);
             System.out.println(TEST_TWO + " was successful");
         } catch (AssertionError e) {
@@ -58,6 +61,7 @@ public class Ex2Test {
     public void testFindMinNumberFail() {
         int[] arr = {};
         try {
+            // Check if the function correctly handles an empty array
             int result = Ex2.findMin(arr);
             System.out.println(TEST_TWO + " has failed");
         } catch (IllegalArgumentException e) {
@@ -72,6 +76,7 @@ public class Ex2Test {
         int result = Ex2.findMaxSumOfNMinusOne(arr);
 
         try {
+            // Check if the maximum sum of n-1 numbers is correctly calculated
             Assertions.assertEquals(expected, result);
             System.out.println(TEST_THREE + " was successful");
         } catch (AssertionError e) {
@@ -83,6 +88,7 @@ public class Ex2Test {
     public void testMaxSumFail() {
         int[] arr = {};
         try {
+            // Check if the function correctly handles an empty array
             int result = Ex2.findMaxSumOfNMinusOne(arr);
             System.out.println(TEST_THREE + " has failed");
         } catch (IllegalArgumentException e) {
@@ -97,6 +103,7 @@ public class Ex2Test {
         int result = Ex2.findMinSumOfNMinusOne(arr);
 
         try {
+            // Check if the minimum sum of n-1 numbers is correctly calculated
             Assertions.assertEquals(expected, result);
             System.out.println(TEST_FOUR + " was successful");
         } catch (AssertionError e) {
@@ -108,6 +115,7 @@ public class Ex2Test {
     public void testMinSumFail() {
         int[] arr = {};
         try {
+            // Check if the function correctly handles an empty array
             int result = Ex2.findMinSumOfNMinusOne(arr);
             System.out.println(TEST_FOUR + " has failed");
         } catch (IllegalArgumentException e) {

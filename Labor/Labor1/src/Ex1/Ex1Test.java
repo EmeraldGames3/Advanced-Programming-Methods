@@ -20,7 +20,6 @@ public class Ex1Test {
 
     @BeforeEach
     public void setUp() {
-        // Initialization code if needed
     }
 
     @Test
@@ -30,6 +29,7 @@ public class Ex1Test {
         int[] expected = {29, 38};
 
         try {
+            // Assert that the failing grades are correctly obtained
             Assertions.assertArrayEquals(expected, result);
             System.out.println(TEST_ONE + " " + SUCCESSFUL);
         } catch (AssertionError e) {
@@ -42,6 +42,7 @@ public class Ex1Test {
         int[] grades = {};
 
         try {
+            // Assert that the method correctly handles a null array
             assertThrows(IllegalArgumentException.class, () -> Ex1.getFailingGrades(grades));
             System.out.println(TEST_ONE + " " + SUCCESSFUL);
         } catch (AssertionError e) {
@@ -57,6 +58,7 @@ public class Ex1Test {
         double result = Ex1.calculateAverage(grades);
 
         try {
+            // Assert that the average grade is correctly calculated
             assertEquals(expected, result);
             System.out.println(TEST_TWO + " " + SUCCESSFUL);
         } catch (AssertionError e) {
@@ -69,6 +71,7 @@ public class Ex1Test {
         int[] grades = {};
 
         try {
+            // Assert that the method correctly handles an empty or null array
             assertThrows(IllegalArgumentException.class, () -> Ex1.calculateAverage(grades));
             System.out.println(TEST_TWO + " " + SUCCESSFUL);
         } catch (AssertionError e) {
@@ -84,6 +87,7 @@ public class Ex1Test {
         int[] result = Ex1.roundedGrades(grades);
 
         try {
+            // Assert that the grades are correctly rounded
             Assertions.assertArrayEquals(expected, result);
             System.out.println(TEST_THREE + " " + SUCCESSFUL);
         } catch (AssertionError e) {
@@ -96,6 +100,7 @@ public class Ex1Test {
         int[] grades = {};
 
         try {
+            // Assert that the method correctly handles an empty or null array
             assertThrows(IllegalArgumentException.class, () -> Ex1.roundedGrades(grades));
             System.out.println(TEST_THREE + " " + SUCCESSFUL);
         } catch (AssertionError e) {
@@ -111,6 +116,7 @@ public class Ex1Test {
         int result = Ex1.getMaxRoundedGrade(grades);
 
         try {
+            // Assert that the maximum rounded grade is correctly obtained
             Assertions.assertEquals(expected, result);
             System.out.println(TEST_FOUR + " " + SUCCESSFUL);
         } catch (AssertionError e) {
@@ -123,6 +129,7 @@ public class Ex1Test {
         int[] grades = {};
 
         try {
+            // Assert that the method correctly handles an empty or null array
             assertThrows(IllegalArgumentException.class, () -> Ex1.getMaxRoundedGrade(grades));
             System.out.println(TEST_FOUR + " " + SUCCESSFUL);
         } catch (AssertionError e) {
