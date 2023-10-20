@@ -10,7 +10,7 @@ public class Ex1 {
             throw new IllegalArgumentException("Array is null");
 
         return Arrays.stream(grades)
-                .filter(grade -> grade < 40)
+                .filter(grade -> grade < 38)
                 .toArray();
     }
 
