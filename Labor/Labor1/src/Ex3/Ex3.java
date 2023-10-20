@@ -5,9 +5,8 @@ public class Ex3 {
     // Addition of two large numbers represented as arrays
     public static int[] sum(int[] number1, int[] number2) {
         // Validate input
-        if (number1 == null || number2 == null || number1.length != number2.length || number1.length == 0) {
+        if (number1 == null || number2 == null || number1.length != number2.length || number1.length == 0)
             throw new IllegalArgumentException("Invalid input");
-        }
 
         int n = number1.length;
         int carry = 0;
@@ -23,23 +22,17 @@ public class Ex3 {
             carry = sum / 10;  // Update the carry
         }
 
-        if (carry > 0) {
-            // If there's a carry after all digits, create a new result array with an additional digit.
-            int[] newResult = new int[resultLength + 1];
-            newResult[0] = carry;
-            System.arraycopy(result, 0, newResult, 1, resultLength);
-            return newResult;
-        } else {
-            return result;
-        }
+        if (carry > 0)
+            result = addLeadingDigit(result, carry);  // Add carry as a leading digit if it exists
+
+        return result;
     }
 
     // Subtraction of two large numbers represented as arrays
     public static int[] subtract(int[] number1, int[] number2) {
         // Validate input
-        if (number1 == null || number2 == null || number1.length != number2.length || number1.length == 0) {
+        if (number1 == null || number2 == null || number1.length != number2.length || number1.length == 0)
             throw new IllegalArgumentException("Invalid input");
-        }
 
         int n = number1.length;
         int[] result = new int[n];
@@ -52,9 +45,8 @@ public class Ex3 {
             if (difference < 0) {
                 difference += 10;
                 borrow = 1;
-            } else {
+            } else
                 borrow = 0;
-            }
 
             result[i] = difference;
         }
@@ -65,9 +57,8 @@ public class Ex3 {
     // Multiplication of a large number array by a digit
     public static int[] multiply(int[] number1, int digit) {
         // Validate input
-        if (number1 == null || number1.length == 0 || digit < 0 || digit > 9) {
+        if (number1 == null || number1.length == 0 || digit < 0 || digit > 9)
             throw new IllegalArgumentException("Invalid input");
-        }
 
         int n = number1.length;
         int[] result = new int[n];
@@ -80,9 +71,8 @@ public class Ex3 {
             carry = product / 10;  // Update the carry
         }
 
-        if (carry > 0) {
+        if (carry > 0)
             result = addLeadingDigit(result, carry);  // Add carry as a leading digit if it exists
-        }
 
         return result;
     }
@@ -90,9 +80,9 @@ public class Ex3 {
     // Integer division of a large number array by a digit
     public static int[] divide(int[] num1, int divisor) {
         // Validate input
-        if (num1 == null || num1.length == 0 || divisor == 0) {
+        if (num1 == null || num1.length == 0 || divisor == 0)
             throw new IllegalArgumentException("Invalid input");
-        }
+
 
         int n = num1.length;
         int[] result = new int[n];

@@ -3,9 +3,8 @@ package Ex2;
 public class Ex2 {
     // Find the maximum number in the array
     public static int findMax(int[] numbers) {
-        if (numbers.length == 0) {
+        if (numbers.length == 0)
             throw new IllegalArgumentException("Array is empty");
-        }
 
         int max = numbers[0];
 
@@ -19,9 +18,8 @@ public class Ex2 {
 
     // Find the minimum number in the array
     public static int findMin(int[] numbers) {
-        if (numbers.length == 0) {
+        if (numbers.length == 0)
             throw new IllegalArgumentException("Array is empty");
-        }
 
         int min = numbers[0];
 
@@ -35,9 +33,8 @@ public class Ex2 {
 
     // Find the maximum sum of n-1 numbers
     public static int findMaxSumOfNMinusOne(int[] numbers) {
-        if (numbers.length == 0) {
+        if (numbers.length == 0)
             throw new IllegalArgumentException("Array is empty");
-        }
 
         int sum = 0;
         int min = numbers[0];
@@ -55,9 +52,8 @@ public class Ex2 {
 
     // Find the minimum sum of n-1 numbers
     public static int findMinSumOfNMinusOne(int[] numbers) {
-        if (numbers.length == 0) {
+        if (numbers.length == 0)
             throw new IllegalArgumentException("Array is empty");
-        }
 
         int sum = 0;
         int max = numbers[0];

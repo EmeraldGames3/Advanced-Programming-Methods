@@ -6,9 +6,8 @@ public class Ex1 {
 
     // Return an array of failing grades
     public static int[] getFailingGrades(int[] grades) {
-        if (grades == null) {
+        if (grades == null)
             throw new IllegalArgumentException("Array is null");
-        }
 
         return Arrays.stream(grades)
                 .filter(grade -> grade < 40)
@@ -17,9 +16,8 @@ public class Ex1 {
 
     // Calculate and return the average grade
     public static double calculateAverage(int[] grades) {
-        if (grades == null || grades.length == 0) {
+        if (grades == null || grades.length == 0)
             throw new IllegalArgumentException("Array is empty or null");
-        }
 
         int sum = Arrays.stream(grades).sum();
         return (double) sum / grades.length;
@@ -27,9 +25,8 @@ public class Ex1 {
 
     // Round the grades according to specific rules and return an array of rounded grades
     public static int[] roundedGrades(int[] grades) {
-        if (grades == null) {
+        if (grades == null)
             throw new IllegalArgumentException("Array is null");
-        }
 
         return Arrays.stream(grades)
                 .map(grade -> (grade < 38 || grade % 5 < 3) ? grade : grade + (5 - grade % 5))
@@ -38,9 +35,8 @@ public class Ex1 {
 
     // Find and return the maximum rounded grade
     public static int getMaxRoundedGrade(int[] grades) {
-        if (grades == null || grades.length == 0) {
+        if (grades == null || grades.length == 0)
             throw new IllegalArgumentException("Array is empty or null");
-        }
 
         int maxRoundedGrade = Integer.MIN_VALUE;
 
