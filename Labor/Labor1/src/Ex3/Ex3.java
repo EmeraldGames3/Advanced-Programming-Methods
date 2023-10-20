@@ -10,21 +10,28 @@ public class Ex3 {
         }
 
         int n = number1.length;
-        int[] result = new int[n + 1];
         int carry = 0;
 
+        // Calculate the maximum possible length for the result
+        int resultLength = Math.max(number1.length, number2.length);
+        int[] result = new int[resultLength];
+
         // Iterate from the least significant digit to the most significant digit
-        for (int i = n - 1; i >= 0; i--) {
+        for (int i = n - 1, j = resultLength - 1; i >= 0; i--, j--) {
             int sum = number1[i] + number2[i] + carry;
-            result[i + 1] = sum % 10;  // Store the least significant digit of the sum
+            result[j] = sum % 10;  // Store the least significant digit of the sum
             carry = sum / 10;  // Update the carry
         }
 
         if (carry > 0) {
-            result[0] = carry;  // If there's a carry after all digits, store it as the most significant digit.
+            // If there's a carry after all digits, create a new result array with an additional digit.
+            int[] newResult = new int[resultLength + 1];
+            newResult[0] = carry;
+            System.arraycopy(result, 0, newResult, 1, resultLength);
+            return newResult;
+        } else {
+            return result;
         }
-
-        return result;
     }
 
     // Subtraction of two large numbers represented as arrays
