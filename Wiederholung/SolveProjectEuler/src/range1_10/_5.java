@@ -1,3 +1,5 @@
+package range1_10;
+
 import Utils.MyMath;
 
 public class _5 {

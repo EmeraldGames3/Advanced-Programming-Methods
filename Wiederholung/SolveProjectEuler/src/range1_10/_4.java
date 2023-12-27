@@ -1,3 +1,5 @@
+package range1_10;
+
 import static Utils.MyMath.isPalindrome;
 
 public class _4 {

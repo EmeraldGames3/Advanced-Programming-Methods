@@ -1,3 +1,5 @@
+package range1_10;
+
 import static Utils.MyMath.Fibonacci;
 
 public class _2 {

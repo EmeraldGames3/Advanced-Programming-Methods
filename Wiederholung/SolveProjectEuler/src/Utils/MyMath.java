@@ -1,6 +1,5 @@
 package Utils;
 
-import java.lang.reflect.Parameter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,13 +36,13 @@ public class MyMath {
         return a * b / gcd(a, b);
     }
 
-    public static ArrayList<Pair<Integer, Integer>> divideInPrimeFactors(int number){
+    public static ArrayList<Pair<Integer, Integer>> divideInPrimeFactors(int number) {
         ArrayList<Pair<Integer, Integer>> primesAndFactors = new ArrayList<>();
 
-        for(int i = 2; i <= number; i++){
-            if(number % i == 0){
+        for (int i = 2; i <= number; i++) {
+            if (number % i == 0) {
                 int counter = 0;
-                while (number % i == 0 && number != 0){
+                while (number % i == 0 && number != 0) {
                     number /= i;
                     counter++;
                 }
@@ -53,6 +52,32 @@ public class MyMath {
 
         return primesAndFactors;
     }
+
+    public static ArrayList<Long> divisors(long number) {
+        ArrayList<Long> divisors = new ArrayList<>();
+
+        if (number < 1)
+            return divisors;
+
+        divisors.add(1L);
+
+        if (number == 1)
+            return divisors;
+
+        for (long i = 2; i * i <= number; i++) {
+            if (number % i == 0) {
+                divisors.add(i);
+                if (i != number / i) {
+                    divisors.add(number / i);
+                }
+            }
+        }
+
+        divisors.add(number);
+
+        return divisors;
+    }
+
 
     public static boolean isPalindrome(long number) {
         String original = Long.toString(number);

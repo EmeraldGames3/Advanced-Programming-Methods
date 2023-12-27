@@ -1,3 +1,5 @@
+package range1_10;
+
 public class _1 {
     /***
      If we list all the natural numbers below that are multiples of or, we get and.
