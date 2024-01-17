@@ -1,0 +1,10 @@
+Afghanistan Asien 652230 25500100 Kabul
+Germany Europa 357022 83149300 Berlin
+Brazil Südamerika 8515767 211000000 Brasília
+Canada Nordamerika 9984670 37590000 Ottawa
+Egypt Afrika 1002450 102334404 Cairo
+Australia Ozeanien 7692024 25687041 Canberra
+India Asien 3287263 1352642280 New Delhi
+Japan Asien 377975 126860000 Tokyo
+South_Africa Afrika 1221037 59308690 Pretoria
+Mexico Nordamerica 1000000 12242000 Mexico_City
