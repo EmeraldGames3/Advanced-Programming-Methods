@@ -6,8 +6,7 @@ public class Meal {
     private String drink;
     private String dessert;
 
-    private Meal() {
-    }
+    private Meal() {}
 
     public String getMainCourse() {
         return mainCourse;
@@ -57,9 +56,7 @@ public class Meal {
         private String drink;
         private String dessert;
 
-        public MealBuilder() {
-
-        }
+        public MealBuilder() {}
 
         public MealBuilder withMainCourse(String mainCourse) {
             this.mainCourse = mainCourse;

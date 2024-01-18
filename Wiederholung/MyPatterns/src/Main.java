@@ -1,3 +1,9 @@
+import Builder.CarBuilder;
+import Factory.Vehicle;
+import Factory.VehicleFactory;
+import Observer.Appointment;
+import Observer.Observer1;
+import Observer.Observer2;
 import Proxy.ProxyInternet;
 import Singleton.Singleton;
 import Strategy.AddOperation;
@@ -34,7 +40,51 @@ public class Main {
         proxyInternet.connectTo("pornhub.com");
     }
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void observer() {
+        Appointment appointment = new Appointment();
+        Observer1 observer1 = new Observer1();
+        Observer1 observer1_2 = new Observer1();
+        Observer2 observer2 = new Observer2();
 
+        appointment.addObserver(observer1);
+        appointment.addObserver(observer1_2);
+        appointment.addObserver(observer2);
+
+        appointment.notifyObservers();
+    }
+
+    public static void builder() {
+        CarBuilder carBuilder = new CarBuilder();
+        System.out.println(carBuilder
+                .addModell("mata")
+                .addEngine("cox")
+                .addBreaks("nuiu")
+                .addTransmission("pwp")
+                .buildCar());
+    }
+
+    public static void factory() {
+        VehicleFactory vehicleFactory = new VehicleFactory();
+
+        Vehicle vehicle1 = vehicleFactory.getVehicle("CAR");
+        vehicle1.drive();
+
+        Vehicle vehicle2 = vehicleFactory.getVehicle("BIKE");
+        vehicle2.drive();
+
+        Vehicle vehicle3 = vehicleFactory.getVehicle("TRUCK");
+        vehicle3.drive();
+    }
+
+    public static void adapter() {
+        NewMediaPlayer spotifyPlayer = new Spotify();
+        spotifyPlayer.play(" song from Spotify");
+
+        OldMediaPlayer cdPlayer = new CDplayer();
+        NewMediaPlayer adapter = new MediaPlayerAdapter(cdPlayer);
+        adapter.play(" song from CD");
+    }
+
+    public static void main(String[] args) {
     }
 }

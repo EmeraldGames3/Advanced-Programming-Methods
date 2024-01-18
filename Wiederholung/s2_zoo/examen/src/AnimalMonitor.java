@@ -30,9 +30,7 @@ public class AnimalMonitor {
                         animal.setHealth_status("Sick");
                         System.out.println(Thread.currentThread().getName() + ": Animal made sick");
                         lock.notify();
-                        if (i < 4) {
-                            lock.wait();
-                        }
+                        lock.wait();
                     }
                 }
             } catch (InterruptedException e) {
