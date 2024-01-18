@@ -1,0 +1,2 @@
+ELEPHANT,Loxodonta africana,10,Enclosure,Sick
+PENGUIN,Spheniscus demersus,2,Enclosure,Sick

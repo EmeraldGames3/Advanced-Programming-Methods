@@ -1,3 +1,9 @@
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
 /**
  * #############################################################################################################################################################
  * <p>
@@ -36,7 +42,24 @@
  */
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        FileReadWrite fileReadWrite = new FileReadWrite();
+        ArrayList<Animal> animals = fileReadWrite.FileRead("src/main/java/animals_inventory.csv");
+
+        Map<String, Long> speciesCount = animals.stream()
+                .collect(Collectors.groupingBy(Animal::getSpecies, Collectors.counting()));
+
+        speciesCount.entrySet().stream()
+                .sorted(Map.Entry.<String, Long>comparingByValue().reversed())
+                .forEach(entry -> System.out.println(entry.getKey() + ": " + entry.getValue()));
+
+        List<Animal> sickAnimalNames = animals.stream()
+                .filter(animal -> "Sick".equals(animal.getHealth_status())) // Filter sick animals
+                .map(animal -> new Animal(animal.getName().toUpperCase(), animal.getSpecies(), animal.getAge(), animal.getEnclosure_type(), animal.getHealth_status())) // Map to uppercased names
+                .collect(Collectors.toList()); // Collect to a list
+
+        // Assuming FileWriteSickAnimals method writes a list of strings to a text file
+        fileReadWrite.FileWriteSickAnimals(sickAnimalNames, "sick_animals.txt");
 
     }
 }

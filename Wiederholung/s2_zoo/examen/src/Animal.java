@@ -1,13 +1,11 @@
-import java.util.ArrayList;
-
 public class Animal {
     private String name;
     private String species;
-    private int age;
+    private Integer age;
     private String enclosure_type;
     private String health_status;
 
-    public Animal(String name, String species, int age, String enclosure_type, String health_status) {
+    public Animal(String name, String species, Integer age, String enclosure_type, String health_status) {
         this.name = name;
         this.species = species;
         this.age = age;
@@ -15,18 +13,9 @@ public class Animal {
         this.health_status = health_status;
     }
 
-    public static Animal stringToAnimal(String string){
-        String[] line = string.split(",");
-        return new Animal(line[0], line[1], Integer.parseInt(line[2]), line[3], line[4]);
-    }
-
-    @Override
-    public String toString() {
-        return name + ',' +
-                species + ',' +
-                age + ',' +
-                enclosure_type + ',' +
-                health_status;
+    public static Animal parseAnimal(String line){
+        String[] words = line.split(",");
+        return new Animal(words[0], words[1], Integer.parseInt(words[2]), words[3], words[4]);
     }
 
     public String getName() {
@@ -45,11 +34,11 @@ public class Animal {
         this.species = species;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 
@@ -68,4 +57,16 @@ public class Animal {
     public void setHealth_status(String health_status) {
         this.health_status = health_status;
     }
+
+    @Override
+    public String toString() {
+        return name + ',' +
+                species + ',' +
+                age + "," +
+                enclosure_type + ',' +
+                health_status;
+    }
+
+    //    "name," "species," "age," "enclosure_type," and "health_status."
+// The columns are separated by the "," character.
 }
