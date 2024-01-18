@@ -6,9 +6,9 @@ import java.util.stream.Collectors;
 public class FilterAndGroupAnimals {
     public static void groupAnimalsBySpecies(ArrayList<Animal> animals){
          animals.stream()
-                .collect(Collectors.groupingBy(Animal::getSpecies, Collectors.counting()))
-                .entrySet()
-                .stream().sorted(Map.Entry.<String, Long>comparingByValue().reversed())
-                 .forEach(entry -> System.out.println(entry.getKey() + ": " + entry.getValue()));
+                 .collect(Collectors.groupingBy(Animal::getSpecies, Collectors.counting()))
+                 .entrySet().stream()
+                 .sorted(Map.Entry.<String, Long>comparingByValue())
+                 .forEach(System.out::println);
     }
 }

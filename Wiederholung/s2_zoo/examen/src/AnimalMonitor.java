@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class AnimalMonitor {
     public void animalHealth(Animal animal) throws InterruptedException {
         final Object lock = new Object();
@@ -5,13 +7,13 @@ public class AnimalMonitor {
         Thread doctorThread = new Thread(() -> {
             Thread.currentThread().setName("Doctor");
             try {
-                for (int i = 0; i < 5; i++) {
-                    synchronized (lock) {
-                        while (!animal.getHealth_status().equals("Sick")) {
+                synchronized (lock) {
+                    for (int i = 0; i < 5; i++) {
+                        while (Objects.equals(animal.getHealth_status(), "Healthy"))
                             lock.wait();
-                        }
                         animal.setHealth_status("Healthy");
-                        System.out.println(Thread.currentThread().getName() + ": Animal cured");
+                        System.out.println(Thread.currentThread().getName() + ": Made animal " + animal.getHealth_status() + " and waited 2 seconds");
+                        Thread.sleep(2000);
                         lock.notify();
                     }
                 }
@@ -23,14 +25,15 @@ public class AnimalMonitor {
         Thread diseaseThread = new Thread(() -> {
             Thread.currentThread().setName("Disease");
             try {
-                for (int i = 0; i < 5; i++) {
-                    synchronized (lock) {
-                        System.out.println(Thread.currentThread().getName() + ": wait 2 seconds");
-                        Thread.sleep(2000);
+                synchronized (lock) {
+                    for (int i = 0; i < 5; i++) {
+                        while (Objects.equals(animal.getHealth_status(), "Sick"))
+                            lock.wait();
+
                         animal.setHealth_status("Sick");
-                        System.out.println(Thread.currentThread().getName() + ": Animal made sick");
+                        System.out.println(Thread.currentThread().getName() + ": Made animal "
+                                + animal.getHealth_status());
                         lock.notify();
-                        lock.wait();
                     }
                 }
             } catch (InterruptedException e) {
@@ -38,8 +41,8 @@ public class AnimalMonitor {
             }
         });
 
-        doctorThread.start();
         diseaseThread.start();
+        doctorThread.start();
 
         doctorThread.join();
         diseaseThread.join();

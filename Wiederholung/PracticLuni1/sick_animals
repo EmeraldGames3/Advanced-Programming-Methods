@@ -1,0 +1,3 @@
+Animal{name='TIGER', species='Panthera', age=3, enclosure_type='Cage', health_status='Sick'}
+Animal{name='ELEPHANT', species='Loxodonta africana', age=10, enclosure_type='Enclosure', health_status='Sick'}
+Animal{name='PENGUIN', species='Spheniscus demersus', age=2, enclosure_type='Enclosure', health_status='Sick'}
