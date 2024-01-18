@@ -1,3 +1,4 @@
+import Adapter.*;
 import Builder.CarBuilder;
 import Factory.Vehicle;
 import Factory.VehicleFactory;
@@ -78,7 +79,7 @@ public class Main {
 
     public static void adapter() {
         NewMediaPlayer spotifyPlayer = new Spotify();
-        spotifyPlayer.play(" song from Spotify");
+        spotifyPlayer.play(" song from Adapter.Spotify");
 
         OldMediaPlayer cdPlayer = new CDplayer();
         NewMediaPlayer adapter = new MediaPlayerAdapter(cdPlayer);

@@ -1,45 +1,39 @@
-import java.util.Objects;
-
 public class AnimalMonitor {
     public void animalHealth(Animal animal) throws InterruptedException {
         final Object lock = new Object();
 
         Thread doctorThread = new Thread(() -> {
-            Thread.currentThread().setName("Doctor");
             try {
-                synchronized (lock) {
-                    for (int i = 0; i < 5; i++) {
-                        while (Objects.equals(animal.getHealth_status(), "Healthy"))
+                while (true) {
+                    synchronized (lock) {
+                        while (animal.getHealth_status().equals("Healthy"))
                             lock.wait();
                         animal.setHealth_status("Healthy");
-                        System.out.println(Thread.currentThread().getName() + ": Made animal " + animal.getHealth_status() + " and waited 2 seconds");
-                        Thread.sleep(2000);
+                        System.out.println(Thread.currentThread().getName() + " " + animal.getHealth_status());
                         lock.notify();
                     }
                 }
             } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
+                throw new RuntimeException(e);
             }
-        });
+        }, "Doctor");
 
         Thread diseaseThread = new Thread(() -> {
-            Thread.currentThread().setName("Disease");
             try {
-                synchronized (lock) {
-                    for (int i = 0; i < 5; i++) {
-                        while (Objects.equals(animal.getHealth_status(), "Sick"))
+                while (true) {
+                    synchronized (lock) {
+                        while (animal.getHealth_status().equals("Sick"))
                             lock.wait();
-
                         animal.setHealth_status("Sick");
-                        System.out.println(Thread.currentThread().getName() + ": Made animal "
-                                + animal.getHealth_status());
+                        System.out.println(Thread.currentThread().getName() + " " + animal.getHealth_status());
                         lock.notify();
+                        Thread.sleep(2000);
                     }
                 }
             } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
+                throw new RuntimeException(e);
             }
-        });
+        }, "Disease");
 
         diseaseThread.start();
         doctorThread.start();

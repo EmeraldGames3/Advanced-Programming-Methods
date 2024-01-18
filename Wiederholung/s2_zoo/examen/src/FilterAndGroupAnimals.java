@@ -8,7 +8,7 @@ public class FilterAndGroupAnimals {
          animals.stream()
                  .collect(Collectors.groupingBy(Animal::getSpecies, Collectors.counting()))
                  .entrySet().stream()
-                 .sorted(Map.Entry.<String, Long>comparingByValue())
+                 .sorted(Map.Entry.<String, Long>comparingByValue().reversed())
                  .forEach(System.out::println);
     }
 }

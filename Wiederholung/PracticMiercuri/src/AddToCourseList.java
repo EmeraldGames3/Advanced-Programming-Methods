@@ -8,13 +8,12 @@ public class AddToCourseList {
             try {
                 synchronized (lock) {
                     for (int i = 0; i < 5; i++) {
+                        System.out.println(Thread.currentThread().getName() + " Added Student");
                         students.add(new Student(i, i, String.valueOf(i), i, String.valueOf(i)));
-                        System.out.println(Thread.currentThread().getName() + ": Add Student and wait 2 seconds");
-                        lock.notify();
                         Thread.sleep(2000);
+                        lock.notify();
                         lock.wait();
                     }
-                    lock.notify();
                 }
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
@@ -22,20 +21,19 @@ public class AddToCourseList {
         }, "Thread-1");
 
         Thread monitoringThread = new Thread(() -> {
-            synchronized (lock) {
-                try {
+            try {
+                synchronized (lock) {
                     for (int i = 0; i < 5; i++) {
                         lock.wait();
-                        System.out.println(Thread.currentThread().getName() + ": Check");
+                        System.out.println(Thread.currentThread().getName() + " Validate added Student");
                         if (students.getLast().getStudent_id() != i){
-                            throw new RuntimeException();
+                            throw new RuntimeException("You dumb");
                         }
                         lock.notify();
                     }
-                    lock.notify();
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
                 }
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
             }
         }, "Thread-2");
 
