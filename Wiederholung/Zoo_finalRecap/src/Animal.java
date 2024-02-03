@@ -13,17 +13,20 @@ public class Animal {
         this.health_status = health_status;
     }
 
-    public Animal(){
-        this.name = "Mirciu";
-        this.species = "cox";
-        this.age = 1;
-        this.enclosure_type = "Type";
-        this.health_status = "Status";
-    }
-
-    public static Animal parseAnimal(String line){
+    public static Animal parseAnimal(String line) {
         String[] words = line.split(",");
         return new Animal(words[0], words[1], Integer.parseInt(words[2]), words[3], words[4]);
+    }
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "name='" + name + '\'' +
+                ", species='" + species + '\'' +
+                ", age=" + age +
+                ", enclosure_type='" + enclosure_type + '\'' +
+                ", health_status='" + health_status + '\'' +
+                '}';
     }
 
     public String getName() {
@@ -65,16 +68,4 @@ public class Animal {
     public void setHealth_status(String health_status) {
         this.health_status = health_status;
     }
-
-    @Override
-    public String toString() {
-        return name + ',' +
-                species + ',' +
-                age + "," +
-                enclosure_type + ',' +
-                health_status;
-    }
-
-    //    "name," "species," "age," "enclosure_type," and "health_status."
-// The columns are separated by the "," character.
 }

@@ -28,6 +28,6 @@ public class Pair<T, U> {
 
     @Override
     public String toString() {
-        return "S9.Pair{" + "first=" + first + ", second=" + second + '}';
+        return "{" + "first=" + first + ", second=" + second + '}';
     }
 }

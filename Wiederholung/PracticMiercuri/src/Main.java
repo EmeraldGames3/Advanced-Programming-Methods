@@ -1,5 +1,6 @@
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws IOException, InterruptedException {
@@ -11,7 +12,7 @@ public class Main {
 
         FileReadWrite.writeToFile(students, "failed.txt");
 
-        ArrayList<String> courses = new ArrayList<>();
+        ArrayList<String> courses = new ArrayList<>(List.of("Test"));
         courses.add("Math");
         courses.add("Mike");
         courses.add("Garman");

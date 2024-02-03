@@ -5,30 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ab6bac5-0ed1-44f4-a0a3-60d3562cc012" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../PracticLuni/sick_animals.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PracticLuni/src/main/java/animals_inventory.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Streams.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/S10/Auto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/S10/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/S10/text.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/S9/Pair.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/S9/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PracticLuni/src/main/java/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticLuni/src/main/java/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PracticLuni/src/main/java/FileReadWrite.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticLuni/src/main/java/FileReadWrite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PracticLuni/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticLuni/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Seminars/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Seminars/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Seminars/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Seminars/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Seminars/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Seminars/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Seminars/src/main/java/Seminar1/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Seminars/src/main/java/Seminar1/MathMethods.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Seminars/src/main/java/Seminar1/TemperatureData.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zoo_finalRecap/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zoo_finalRecap/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zoo_finalRecap/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zoo_finalRecap/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zoo_finalRecap/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zoo_finalRecap/Zoo_finalRecap.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zoo_finalRecap/sick_animals.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zoo_finalRecap/src/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zoo_finalRecap/src/AnimalMonitor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zoo_finalRecap/src/GroupAnimalsBySpecies.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zoo_finalRecap/src/ReadWriteFromFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zoo_finalRecap/src/ThreadTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../s2_zoo/examen/src/Func.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/src/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/untitled.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyPatterns/src/Factory/VehicleFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MyPatterns/src/Factory/VehicleFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyPatterns/src/Observer/Appointment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MyPatterns/src/Observer/Appointment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyPatterns/src/Singleton/Singleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MyPatterns/src/Singleton/Singleton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticMiercuri/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticMiercuri/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/S9/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/S9/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/S9/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/S9/Pair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../s2_zoo/examen/animals_inventory.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../Zoo_finalRecap/src/animals_inventory.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../s2_zoo/examen/pruefung.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Zoo_finalRecap/src/pruefung.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../s2_zoo/examen/src/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/../s2_zoo/examen/src/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../s2_zoo/examen/src/AnimalMonitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../s2_zoo/examen/src/AnimalMonitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../s2_zoo/examen/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../s2_zoo/examen/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../s2_zoo/examen/src/TestAnimalCaretaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/../s2_zoo/examen/src/TestAnimalCaretaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../s2_zoo/out/production/s2_zoo/Animal.class" beforeDir="false" afterPath="$PROJECT_DIR$/../s2_zoo/out/production/s2_zoo/Animal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../s2_zoo/out/production/s2_zoo/AnimalMonitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/../s2_zoo/out/production/s2_zoo/AnimalMonitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../s2_zoo/out/production/s2_zoo/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../s2_zoo/out/production/s2_zoo/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../s2_zoo/out/production/s2_zoo/TestAnimalCaretaker.class" beforeDir="false" afterPath="$PROJECT_DIR$/../s2_zoo/out/production/s2_zoo/TestAnimalCaretaker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../s2_zoo/sick_animals.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../s2_zoo/sick_animals.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +112,11 @@
       <workItem from="1705516042521" duration="2788000" />
       <workItem from="1705519192724" duration="3439000" />
       <workItem from="1705522672324" duration="270000" />
+      <workItem from="1706194770534" duration="701000" />
+      <workItem from="1706196145934" duration="3427000" />
+      <workItem from="1706202617388" duration="513000" />
+      <workItem from="1706214082868" duration="1907000" />
+      <workItem from="1706536109560" duration="17000" />
     </task>
     <servers />
   </component>

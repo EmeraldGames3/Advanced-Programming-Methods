@@ -1,9 +1,6 @@
 package S9;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -29,7 +26,8 @@ public class Main {
         int sumUngerade = numbers
                 .stream()
                 .filter(n -> n % 2 == 1)
-                .reduce(0, (sum, number) -> sum + number);
+                .reduce(Integer::sum)
+                .orElse(0);
         System.out.println(sumUngerade);
 
         int multiplySquares = numbers.stream()
@@ -78,10 +76,38 @@ public class Main {
                 );
 
         double meanNotes = studentGrades.stream()
-                .mapToInt(Pair::getSecond) // Map to int to use sum() later
+                .mapToInt(Pair::getSecond) // Map to int to use later
                 .average() // Calculates the average
                 .orElse(0); // In case the list is empty, default to 0
 
         System.out.println("Mean grade: " + meanNotes);
+
+        List<Integer> numbers1 = Arrays.asList(100, 50, 100, 50);
+        System.out.println((numbers1.stream().mapToInt(x -> x).average().orElse(0)));
+
+        List<Pair<String, Integer>> people = List.of(
+                new Pair<>("Alice", 30),
+                new Pair<>("Bob", 30),
+                new Pair<>("Charlie", 25)
+        );
+
+        // Group people by age
+        Map<Integer, List<String>> peopleByAge = people.stream()
+                .collect(Collectors.groupingBy(
+                        Pair::getSecond,
+                        Collectors.mapping(Pair::getFirst, Collectors.toList())));
+
+        System.out.println(peopleByAge);
+
+        // Create a map of names to ages and print it
+        var temp = people.stream()
+                .collect(Collectors.toMap(Pair::getFirst, Pair::getSecond));
+        System.out.println(temp);
+
+        // Print each age
+        var t = temp.values().stream()
+                .mapToInt(p -> p) // Convert to an IntStream
+                .min().orElse(0);
+        System.out.println(t);
     }
 }

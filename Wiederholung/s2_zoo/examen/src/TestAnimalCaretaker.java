@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class TestAnimalCaretaker {
     public void testAnimalCaretaker() throws IOException {
-        ArrayList<Animal> animals = FileReadWrite.readFromFile("examen/animals_inventory.csv");
+        ArrayList<Animal> animals = FileReadWrite.readFromFile("sick_animals.csv.csv");
 
         AnimalThief animalThief = new AnimalThief();
         AnimalCaretaker animalCaretaker = new AnimalCaretaker();

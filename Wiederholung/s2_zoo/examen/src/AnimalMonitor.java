@@ -26,8 +26,8 @@ public class AnimalMonitor {
                             lock.wait();
                         animal.setHealth_status("Sick");
                         System.out.println(Thread.currentThread().getName() + " " + animal.getHealth_status());
-                        lock.notify();
                         Thread.sleep(2000);
+                        lock.notify();
                     }
                 }
             } catch (InterruptedException e) {

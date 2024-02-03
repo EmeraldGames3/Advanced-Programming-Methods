@@ -16,4 +16,12 @@ public class Singleton {
         }
         return singleton;
     }
+
+//    public static synchronized Singleton getInstance(){
+//        if(singleton == null){
+//            singleton = new Singleton();
+//        }
+//
+//        return singleton;
+//    }
 }
